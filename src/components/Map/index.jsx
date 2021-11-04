@@ -17,7 +17,7 @@ export const MapContainer = (props) => {
 
       const request = {
         location: map.center,
-        radius: '200',
+        radius: '2000',
         type: ['restaurant'],
         query,
       };
@@ -106,6 +106,6 @@ export const MapContainer = (props) => {
 };
 
 export default GoogleApiWrapper({
-  apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+  key: process.env.REACT_APP_GOOGLE_API_KEY,
   language: 'pt-BR',
 })(MapContainer);
